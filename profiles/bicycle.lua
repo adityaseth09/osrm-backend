@@ -61,7 +61,22 @@ function setup()
 
     restricted_access_tag_list = Set { },
 
-    restricted_highway_whitelist = Set { },
+    restricted_highway_whitelist = Set {
+      'motorway',
+      'motorway_link',
+      'trunk',
+      'trunk_link',
+      'primary',
+      'primary_link',
+      'secondary',
+      'secondary_link',
+      'tertiary',
+      'tertiary_link',
+      'residential',
+      'living_street',
+      'unclassified',
+      'service'
+    },
 
     -- tags disallow access to in combination with highway=service
     service_access_tag_blacklist = Set { },
@@ -113,6 +128,10 @@ function setup()
     },
 
     bicycle_speeds = {
+      motorway        = default_speed,
+      motorway_link   = default_speed,
+      trunk           = default_speed,
+      trunk_link      = default_speed,
       cycleway = default_speed,
       primary = default_speed,
       primary_link = default_speed,
